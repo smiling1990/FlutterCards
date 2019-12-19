@@ -115,8 +115,8 @@ class _DroppableWidgetState extends State<DroppableWidget>
     int length = widget.children?.length ?? 0;
     double offset = 8.0;
     for (int i = 0; i < length; i++) {
-      double dx = i == 0 ? _offsetDx : offset;
-      double dy = i == 0 ? _offsetDy : offset;
+      double dx = i == 0 ? _offsetDx : 0.0;
+      double dy = i == 0 ? _offsetDy : 0.0;
       Widget child = Transform.translate(
         child: widget.children[i],
         offset: Offset(dx + (offset * i), dy + (offset * i)),
